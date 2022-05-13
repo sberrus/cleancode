@@ -1,13 +1,20 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const NavbarMenu = () => {
 	return (
 		<>
 			<Navbar bg="dark" variant="dark">
 				<Container>
-					<Navbar.Brand href="/">Clean Code - Fernando Herrera</Navbar.Brand>
+					<Link to="/" className="navbar-brand">
+						Clean Code - Fernando Herrera
+					</Link>
 					<Nav className="me-auto">
-						<Nav.Link href="/deuda-tecnica">Deuda Técnica</Nav.Link>
+						<li className="nav-item">
+							<Link to="/deuda-tecnica" className="nav-link">
+								Deuda Técnica
+							</Link>
+						</li>
 					</Nav>
 				</Container>
 			</Navbar>

@@ -2,11 +2,12 @@ import { Col, Row } from "react-bootstrap";
 
 const EsquemaDeudaTecnica = () => {
 	return (
-		<div style={{ width: "50%", margin: "1em auto" }}>
+		<div style={{ margin: "1em auto" }}>
 			<small className="d-block text-secondary">Esquema de deuda técnica de Martin Fowler</small>
-			<Row style={{ height: "50vh", textAlign: "center" }}>
+			<Row style={{ textAlign: "center" }}>
 				<Col
 					sm={6}
+					style={{ height: "25vh" }}
 					className="border border-3 border-dark d-flex align-items-center justify-content-center flex-column"
 				>
 					<h5>Imprudente - Deliberada</h5>
@@ -17,6 +18,7 @@ const EsquemaDeudaTecnica = () => {
 				</Col>
 				<Col
 					sm={6}
+					style={{ minHeight: "25vh", padding: "2em" }}
 					className="border border-3 border-dark d-flex align-items-center justify-content-center flex-column"
 				>
 					<h5>Prudente o Deliberada</h5>
@@ -27,9 +29,10 @@ const EsquemaDeudaTecnica = () => {
 				</Col>
 				<Col
 					sm={6}
+					style={{ height: "25vh" }}
 					className="border border-3 border-dark d-flex align-items-center justify-content-center flex-column"
 				>
-					<h5>Imprudente e Inacvertida</h5>
+					<h5>Imprudente e Inadvertida</h5>
 					<p>
 						Suele ser la deuda ocacionada por la <b>falta de conocimiento</b> (suele pasar debido a código de
 						programadores Junior o peor aún, un falso senior)
@@ -37,6 +40,7 @@ const EsquemaDeudaTecnica = () => {
 				</Col>
 				<Col
 					sm={6}
+					style={{ height: "25vh" }}
 					className="border border-3 border-dark d-flex align-items-center justify-content-center flex-column"
 				>
 					<h5>Prudente e Inadvertida</h5>
