@@ -7,7 +7,7 @@ const EsquemaDeudaTecnica = () => {
 			<Row style={{ textAlign: "center" }}>
 				<Col
 					sm={6}
-					style={{ height: "25vh" }}
+					style={{ minHeight: "25vh", padding: "2em" }}
 					className="border border-3 border-dark d-flex align-items-center justify-content-center flex-column"
 				>
 					<h5>Imprudente - Deliberada</h5>
@@ -29,7 +29,7 @@ const EsquemaDeudaTecnica = () => {
 				</Col>
 				<Col
 					sm={6}
-					style={{ height: "25vh" }}
+					style={{ minHeight: "25vh", padding: "2em" }}
 					className="border border-3 border-dark d-flex align-items-center justify-content-center flex-column"
 				>
 					<h5>Imprudente e Inadvertida</h5>
@@ -40,7 +40,7 @@ const EsquemaDeudaTecnica = () => {
 				</Col>
 				<Col
 					sm={6}
-					style={{ height: "25vh" }}
+					style={{ minHeight: "25vh", padding: "2em" }}
 					className="border border-3 border-dark d-flex align-items-center justify-content-center flex-column"
 				>
 					<h5>Prudente e Inadvertida</h5>

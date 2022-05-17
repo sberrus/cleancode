@@ -6,7 +6,7 @@ const MainWrapper = () => {
 	return (
 		<div className="mb-5">
 			<NavbarMenu />
-			<Container>
+			<Container fluid>
 				<Outlet />
 			</Container>
 		</div>

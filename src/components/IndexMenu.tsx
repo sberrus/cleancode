@@ -7,7 +7,7 @@ const IndexMenu = () => {
 			<ul>
 				<h5>Seciones del curso</h5>
 				<li>
-					<Link to="/deuda-tecnica">Deuda Tecnica</Link>
+					<Link to="/deuda-tecnica">Clean Code</Link>
 				</li>
 			</ul>
 		</>

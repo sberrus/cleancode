@@ -7,12 +7,12 @@ const NavbarMenu = () => {
 			<Navbar bg="dark" variant="dark">
 				<Container>
 					<Link to="/" className="navbar-brand">
-						Clean Code - Fernando Herrera
+						Home
 					</Link>
 					<Nav className="me-auto">
 						<li className="nav-item">
 							<Link to="/deuda-tecnica" className="nav-link">
-								Deuda Técnica
+								Clean Code
 							</Link>
 						</li>
 					</Nav>
