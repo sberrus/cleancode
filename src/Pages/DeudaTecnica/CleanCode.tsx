@@ -1,15 +1,20 @@
-import { Container } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import EsquemaDeudaTecnica from "./EsquemaDeudaTecnica";
+
+// assets
+import nombresVariablesBien from "../../assets/snippets/nombresVariablesBien.png";
+import nombresVariablesMal from "../../assets/snippets/nombresVariablesMal.png";
+import { ArticleTitle, HeaderTitle, SectionTitle } from "../../components/TitlesAndHeaders";
+import { BadExampleSnippet, GoodExampleSnippet } from "../../components/SnippetsExamples";
 
 const DeudaTecnica = () => {
 	return (
 		<Container>
-			<h1 className="display-3">Deuda Técnica</h1>
+			<HeaderTitle>Clean Code</HeaderTitle>
 
 			<section id="indice">
 				<hr />
-				{/* Indice */}
-				<h2 className="display-5">Indice</h2>
+				<SectionTitle>Indice</SectionTitle>
 				<ol>
 					<li className="fw-bold">
 						<a href="#definicion">¿Qué es la deuda técnica?</a>
@@ -27,6 +32,11 @@ const DeudaTecnica = () => {
 					</li>
 					<li className="fw-bold">
 						<a href="#nombresVariables">Nombres de variables</a>{" "}
+						<ol>
+							<li>
+								<a href="#buenaDefinicionNombreVariables">Buena definición de nombres de variables</a>
+							</li>
+						</ol>
 					</li>
 					<li className="fw-bold">Nombres para funciones</li>
 					<li className="fw-bold">Ejercicios de refactorización</li>
@@ -36,7 +46,7 @@ const DeudaTecnica = () => {
 			</section>
 
 			<section id="definicion">
-				<h2>1. ¿Qué es la deuda técnica?</h2>
+				<SectionTitle>1. ¿Qué es la deuda técnica?</SectionTitle>
 				<p>
 					La deuda técnica es un tipo de deuda que pagamos como desarrolladores que a la larga nos cuesta tiempo y
 					por ende dinero.
@@ -44,7 +54,6 @@ const DeudaTecnica = () => {
 					<b>Clean Code</b> nos ayuda a prevenir estas deudas técnicas y nos proveé una serie de herramientas y
 					recomendaciones para que podamos mejorar nuestro código.
 				</p>
-
 				<EsquemaDeudaTecnica />
 				<p>
 					A menudo caer en la deuda técnica es normal y en ciertos casos inevitable debido a las complejidades que
@@ -53,7 +62,7 @@ const DeudaTecnica = () => {
 			</section>
 
 			<section id="pagarDeudaTecnica">
-				<h2>2. ¿Cómo se paga la deuda técnica?</h2>
+				<SectionTitle>2. ¿Cómo se paga la deuda técnica?</SectionTitle>
 				<p>
 					La deuda técnica de no corregirse correctamente suele tener un coste que sí o sí se tendrá que pagar en
 					cualquier momento. Aunque principalmente se paga con tiempo lo cual es lo más valioso que tenemos como
@@ -62,12 +71,12 @@ const DeudaTecnica = () => {
 			</section>
 
 			<section id="refactorizacion">
-				<h2>3. Refactorización</h2>
+				<SectionTitle>3. Refactorización</SectionTitle>
 				<p className="fst-italic">
 					Es simplemente un proceso que tiene como objetivo mejorar el código sin alterar su comportamiento para
 					que sea más entendible y tolerante a cambios.
 				</p>
-				<h3 id="importanciaTests">3.1. Los Test y su importancia</h3>
+				<ArticleTitle id="importanciaTests">3.1. Los Test y su importancia</ArticleTitle>
 				<p>
 					Una de las cosas que se puede hacer para realizar las refactorizaciones de manera correcta es creando
 					pruebas automatizadas que nos permitan comprobar que la refactorización no este rompiendo nada.
@@ -102,7 +111,26 @@ const DeudaTecnica = () => {
 				<hr />
 			</section>
 
-			<section id="nombresVariables"></section>
+			<section id="nombresVariables">
+				<SectionTitle>4. Nombre de las variables</SectionTitle>
+				<article>
+					<ArticleTitle id="buenaDefinicionNombreVariables">
+						4.1 Buena definición de los nombres de variables
+					</ArticleTitle>
+					<p>
+						Los nombres de las variables deben estar <b>escritas en ingles</b> y deben ser <b>pronunciables</b>.
+					</p>
+					<p>
+						Dependiendo del lenguaje de programación hay que conocer las convenciones de dicho lenguaje. Por
+						ejemplo: Java se escribe por convención <b>snake_case</b>. Javascript suele escribirse en{" "}
+						<b>camelCase</b>.
+					</p>
+					<Row>
+						<GoodExampleSnippet snippetRoute={nombresVariablesBien} />
+						<BadExampleSnippet snippetRoute={nombresVariablesMal} />
+					</Row>
+				</article>
+			</section>
 		</Container>
 	);
 };

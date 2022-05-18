@@ -1,6 +1,6 @@
 import { Link, Route, Routes } from "react-router-dom";
 import IndexMenu from "./components/IndexMenu";
-import DeudaTecnica from "./Pages/DeudaTecnica/DeudaTecnica";
+import DeudaTecnica from "./Pages/DeudaTecnica/CleanCode";
 import MainWrapper from "./_partials/MainWrapper";
 
 const App = () => {
