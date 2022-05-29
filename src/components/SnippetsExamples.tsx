@@ -1,7 +1,11 @@
-import { Col } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 
 type Props = {
 	snippetRoute: string;
+};
+
+type SnippetContainerProps = {
+	children: JSX.Element | JSX.Element[];
 };
 
 const GoodExampleSnippet = ({ snippetRoute }: Props) => {
@@ -35,4 +39,12 @@ const BadExampleSnippet = ({ snippetRoute }: Props) => {
 	);
 };
 
-export { GoodExampleSnippet, BadExampleSnippet };
+const SnippetContainer = ({ children }: SnippetContainerProps) => {
+	return (
+		<Row style={{ background: "#1a1924", padding: "1em 3em", marginBottom: "2em" }}>
+			{children}
+		</Row>
+	);
+};
+
+export { GoodExampleSnippet, BadExampleSnippet, SnippetContainer };
