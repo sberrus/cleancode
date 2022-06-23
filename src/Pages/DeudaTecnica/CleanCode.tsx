@@ -6,6 +6,10 @@ import nombresVariablesBien from "../../assets/snippets/nombresVariablesBien.png
 import nombresVariablesMal from "../../assets/snippets/nombresVariablesMal.png";
 import nombresTecnicosMal from "../../assets/snippets/nombresTecnicosMal.png";
 import nombresTecnicosBien from "../../assets/snippets/nombresTecnicosBien.png";
+import ejercicioSnippet1Mal from "../../assets/snippets/ejercicioSnippet1Mal.png";
+import ejercicioSnippet1Bien from "../../assets/snippets/ejercicioSnippet1Bien.png";
+import ejercicioSnippet2Mal from "../../assets/snippets/ejercicioSnippet2Mal.png";
+import ejercicioSnippet2Bien from "../../assets/snippets/ejercicioSnippet2Bien.png";
 
 import { ArticleTitle, HeaderTitle, SectionTitle } from "../../components/TitlesAndHeaders";
 import {
@@ -170,6 +174,62 @@ const DeudaTecnica = () => {
 						4.3 Ejemplos de archivos y sus posibles modificaciones para mejorar la
 						legibilidad.
 					</ArticleTitle>
+					<p>
+						En el siguiente ejemplo continuaremos con la clase y veremos unos snippets que
+						estarían mal y sus correspondientes correcciones.
+					</p>
+					<h5>Primer caso: Mal uso de los nombres de variables.</h5>
+					<SnippetContainer>
+						<BadExampleSnippet snippetRoute={ejercicioSnippet1Mal} />
+						<GoodExampleSnippet snippetRoute={ejercicioSnippet1Bien} />
+					</SnippetContainer>
+					<p>En el ejemplo anterior, podemos darnos cuenta de varias cosas en el snippet.</p>
+					<ul>
+						<li>
+							El namespace del objeto esta abreviado, esto dificulta la legibilidad y la
+							intencionalidad del objeto en si dificultando su proposito.
+						</li>
+						<li>
+							Si bien hemos hablado de las abreviaciones, en el caso de la propiedad{" "}
+							<b>id</b> es un caso especial debido a que <b>id</b> es un estandar para
+							identificar los elemento dentro de una bbdd o una estructura de datos lo cual
+							no es necesario realizar ningún cambio en esta propiedad.
+						</li>
+						<li>
+							La propiedad <b>f</b> no dice absolutamente nada acerca de la intencionalidad
+							de la misma, lo cual dificulta la legibilidad.
+						</li>
+					</ul>
+					<b>
+						ProTip: Si vemos que tenemos que poner muchos comentarios para explicar un bloque
+						de código o una variable es una 🚩 (red flag) que nos indica que debemos cambiar o
+						simplificar los namespaces.
+					</b>
+					<h5>
+						Caso 2: Usando el objeto anterior, mejorando legibilidad de la lógica en la
+						programación funcional.
+					</h5>
+					<SnippetContainer>
+						<BadExampleSnippet snippetRoute={ejercicioSnippet2Mal} />
+						<GoodExampleSnippet snippetRoute={ejercicioSnippet2Bien} />
+					</SnippetContainer>
+					<p>
+						En el ejemplo anterior también podemos observar diversos errores de legibilidad
+						que nos dificultarían en un futuro realizar cambios o saber que hace el código.
+					</p>
+					<ol>
+						<li>
+							Primero vemos que estamos usando la función <b>map{"()"}</b> que es una función
+							que devuelve un array a partir de una evaluación. Como sabemos que el método
+							devolverá el array con los items que se van a eliminar dependiendo si flagged
+							=== true, intuimos que el array van a ser los archivosParaBorrar o
+							filesToDelete en ingles.
+						</li>
+						<li>
+							El callback de la misma forma podemos observar que cada item del array es un
+							file, por lo que el objeto a evaluar mejoramos su legibilidad de esa manera.
+						</li>
+					</ol>
 				</article>
 			</section>
 		</Container>

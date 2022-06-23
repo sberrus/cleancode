@@ -11,7 +11,7 @@ type SnippetContainerProps = {
 const GoodExampleSnippet = ({ snippetRoute }: Props) => {
 	return (
 		<>
-			<Col xs={12} md={6}>
+			<Col xs={12} md={6} style={{ margin: "auto" }}>
 				<h5 className="text-success">Mejor</h5>
 				<img
 					src={snippetRoute}
@@ -26,7 +26,7 @@ const GoodExampleSnippet = ({ snippetRoute }: Props) => {
 const BadExampleSnippet = ({ snippetRoute }: Props) => {
 	return (
 		<>
-			<Col xs={12} md={6}>
+			<Col xs={12} md={6} style={{ margin: "auto" }}>
 				<h5 className="text-danger">Mal</h5>
 				<img
 					src={snippetRoute}
